@@ -3,5 +3,6 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[cssgen "0.2.6"]]
+  :dependencies [[cssgen "0.2.6"]
+                 [fs "1.3.2"]]
   :eval-in-leiningen true)

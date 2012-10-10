@@ -5,4 +5,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[cssgen "0.2.6"]
                  [fs "1.3.2"]]
-  :eval-in-leiningen true)
+  :eval-in-leiningen true
+  :cssgenbuild {:source-path "src/stylesheets/"
+                :destination-path "resources/public/css/"})

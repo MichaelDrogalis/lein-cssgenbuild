@@ -1,6 +1,12 @@
-(ns leiningen.cssgenbuild)
+(ns leiningen.cssgenbuild
+  (:require [cssgen :refer :all]
+            [leiningen.theme :refer [*rule-list*]]))
+
+(defn once []
+  (apply css-file "out.css" *rule-list*))
 
 (defn cssgenbuild
-  "I don't do a lot."
+  "Generate stylesheets from cssgen."
   [project & args]
-  (println "Hi!"))
+  (if (= (first args) "once")
+    (once)))

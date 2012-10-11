@@ -1,13 +1,13 @@
 (ns leiningen.cssgenbuild
   (:require [cssgen :refer :all]
-            [stylesheets.theme :refer [*rule-list*]]
             [fs.core :as fs]))
 
 (defn generate-stylesheet [project cssgen-file]
   (let [file-ns (:ns (meta (load-file (.getPath cssgen-file))))
-        name (.getName cssgen-file)]
-    (in-ns (ns-name file-ns))
-    (apply css-file (str (:destination-path (:cssgenbuild project)) name) *rule-list*)))
+        name (.getName cssgen-file)
+        rule-seq (var-get (ns-resolve (ns-name file-ns) 'rule-sequence))
+        dst-path (str (:destination-path (:cssgenbuild project)) name)]
+    (apply css-file dst-path rule-seq)))
 
 (defn once [project]
   (doall (map #(generate-stylesheet project %) (fs/find-files (:source-path (:cssgenbuild project)) #".+.clj"))))
@@ -17,3 +17,4 @@
   [project & args]
   (if (= (first args) "once")
     (once project)))
+

@@ -12,7 +12,7 @@ In your `:plugins`:
 
 ### cssgen fork
 
-In order to make this plugin work, you must use `[cssgen-rule-seq "0.2.7-SNAPSHOT"]` instead of normal cssgen until the required code gets merged into the main repository.
+In order to make this plugin work, you must use `[cssgen-rule-seq "0.2.8"]` instead of normal cssgen until the required code gets merged into the main repository.
 
 ### Usage
 

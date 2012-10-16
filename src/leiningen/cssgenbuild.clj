@@ -14,7 +14,9 @@
         name (.getName cssgen-file)
         rule-seq (var-get (ns-resolve (ns-name namespace) 'rule-sequence))
         dst-path (str (:destination-path (:cssgenbuild project)) name)]
-    (apply css-file dst-path rule-seq)))
+    (do
+      (println "Generating " css-file " to " dst-path)
+      (apply css-file dst-path rule-seq))))
 
 (defn once [project]
   (doall (map #(generate-stylesheet project %) (fs/find-files (:source-path (:cssgenbuild project)) #".+.clj"))))

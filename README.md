@@ -8,7 +8,7 @@ A Leiningen plugin generate stylesheets from cssgen s-expressions.
 
 In your `:plugins`:
 
-    [lein-cssgenbuild "0.2.0"]
+    [lein-cssgenbuild "0.2.1"]
 
 ### cssgen fork
 

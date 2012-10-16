@@ -1,4 +1,4 @@
-(defproject lein-cssgenbuild "0.2.1-SNAPSHOT"
+(defproject lein-cssgenbuild "0.2.1"
   :description "Leiningen plugin to generate stylesheets from cssgen"
   :url "https://github.com/MichaelDrogalis/lein-cssgenbuild"
   :license {:name "Eclipse Public License"

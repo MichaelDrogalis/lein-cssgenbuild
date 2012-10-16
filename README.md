@@ -4,15 +4,11 @@ A Leiningen plugin generate stylesheets from cssgen s-expressions.
 
 ## Installation
 
-### User-level plugins
+### Clojars
 
-Put `[lein-cssgenbuild "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your
-`:user` profile, or if you are on Leiningen 1.x do `lein plugin install
-lein-cssgenbuild 0.1.0-SNAPSHOT`.
+In your `:plugins`:
 
-### Project-level plugins
-
-Put `[lein-cssgenbuild "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
+    [lein-cssgenbuild "0.2.0"]
 
 ### cssgen fork
 

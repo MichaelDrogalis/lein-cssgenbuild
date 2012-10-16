@@ -6,7 +6,6 @@
 (def file-ns
      (memoize
       (fn [file]
-        (println file)
         (:ns (meta file)))))
 
 (defn generate-stylesheet [project cssgen-file]

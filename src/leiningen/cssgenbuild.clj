@@ -14,7 +14,7 @@
         rule-seq (var-get (ns-resolve (ns-name namespace) 'rule-sequence))
         dst-path (str (:destination-path (:cssgenbuild project)) name)]
     (do
-      (println "Generating " css-file " to " dst-path)
+      (println "Generating " (.getPath css-file) " to " (:destination-path (:cssgenbuild project)))
       (apply css-file dst-path rule-seq))))
 
 (defn once [project]

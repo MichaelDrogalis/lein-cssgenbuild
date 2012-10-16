@@ -1,6 +1,6 @@
 # lein-cssgenbuild
 
-A Leiningen plugin generate stylesheets from cssgen s-expressions.
+A Leiningen plugin to generate stylesheets from cssgen s-expressions.
 
 ## Installation
 
@@ -16,7 +16,7 @@ In order to make this plugin work, you must use `[cssgen-rule-seq "0.2.8"]` inst
 
 ## Usage
 
-Wrap your rules around a `rule-seq` macro call:
+Wrap your rules with a `rule-seq` macro call:
 
 ```clojure
 (ns stylesheets.theme
@@ -32,8 +32,8 @@ Wrap your rules around a `rule-seq` macro call:
 Configure `cssgenbuild` in your `project.clj`:
 
 ```clojure
-  :cssgenbuild {:source-path "src/stylesheets/"
-                :destination-path "resources/public/css/"}
+  :cssgenbuild {:source-path "path/to/clj-stylesheets/"
+                :destination-path "path/to/css/destination/files/"}
 ```
 
 Generate CSS files with:

@@ -14,7 +14,7 @@ In your `:plugins`:
 
 In order to make this plugin work, you must use `[cssgen-rule-seq "0.2.8"]` instead of normal cssgen until the required code gets merged into the main repository.
 
-### Usage
+## Usage
 
 Wrap your rules around a `rule-seq` macro call:
 
